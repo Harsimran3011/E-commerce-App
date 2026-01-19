@@ -21,39 +21,147 @@ html, body {
 .userInfo .login {
     height: 60vh;
     width: 90vh;
-    background-color: rgb(131, 130, 130);
+    overflow: hidden;
     border-radius: .33vh;
+    background-color: rgb(131, 130, 130);
+}
+
+.userInfo .login {
+    background-color: purple;
 }
 
 .login .left {
     height: 100%;
     width: 50%;
-    background-color: green;
-    padding: 1.5vh;
+    background-color: red;
+}
+
+.left_content {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    padding: 4vh 1vh;
     display: flex;
     align-items: center;
+    font-family: roboto;
     flex-direction: column;
 }
 
+.login .left h2 {
+    font-size: 3vh;
+}
+
+.login .left p {
+    font-size: 1.2vh;
+    margin-top: 1vh;
+}
+
+
 .login .left .google_login {
-    background-color: #f3f3f3;
+    border: 1px solid rgba(202, 200, 200, 0.253);
     width: 70%;
     padding: 1vh;
     border-radius: 3vh;
-    margin-top: 4vh;
+    margin-top: 3vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .google_login img {
     object-fit: cover;
     height: 2vh;
+    margin-right: 1vh;
 }
 
 .google_login h3 {
-    font-size: 1.3vh;
+    font-size: 1.2vh;
     text-transform: capitalize;
     font-family: roboto;
     font-weight: 400;
+}
+
+.orSignIn {
+    margin-top: 2vh;
+    background: rgba(202, 200, 200, 0.253);
+    width: 70%;
+    margin-bottom: 1vh;
+}
+
+.orSignIn .line {
+    height: .25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orSignIn .line a {
+    background-color: #FFF;
+    font-size: 1vh;
+    text-decoration: none;
+    color: gray;
+    padding: 1vh;
+}
+
+.left_content .email {
+    height: 2.5vh;
+    /* background-color: red; */
+    width: 70%;
+    margin-top: 3vh;
+}
+
+.left_content .email h2 {
+    font-size: 1.2vh;
+    font-weight: 400;
+    width: 100%;
+}
+
+.left_content .email .input {
+    /* background-color: green; */
+    height: 4vh;
+    border: .5px solid rgba(202, 200, 200, 0.253);
+    border-radius: 2vh;
+    overflow: hidden;
+    margin-top: .8vh;
+}
+
+.left_content .email .input input {
+    height: 100%;
+    /* background: transparent; */
+    width: 100%;
+    padding: 0vh 2vh;
+    outline: none;
+    border: none;
+    font-size: 1.2vh;
+}
+
+.left_content .pass {
+   height: 2.5vh;
+    /* background-color: red; */
+    width: 70%;
+    margin-top: 6vh;
+}
+
+.left_content .pass h2 {
+    font-size: 1.2vh;
+    font-weight: 400;
+}
+
+.left_content .pass .input {
+    height: 4vh;
+    border: .5px solid rgba(202, 200, 200, 0.253);
+    border-radius: 2vh;
+    overflow: hidden;
+    margin-top: .8vh;
+} 
+
+.left_content .pass .input input {
+    height: 100%;
+    /* background: transparent; */
+    width: 100%;
+    padding: 0vh 2vh;
+    outline: none;
+    border: none;
+    font-size: 1.2vh;
 }
