@@ -236,9 +236,56 @@ html, body {
         width: 100%;
     }
 
-    .login .left .left_content { 
-        width: 100%;
+    .login .left_content p {
+        text-align: center;
+        min-width: 30vh;
+    }
+
+    .left_content .google_login, .orSignIn, .email, .pass, .remember, .loginBtn {
+        min-width: 30vh;
+    }
+
+    .left_content #registered {
+        min-width: 20vh;
+    }
+
+    .login .right {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+    .userInfo  {
         padding: 5vh;
+    }
+
+    .userInfo .login {
+        max-width: 50vh;
+        /* background-color: transparent; */
+        /* background-color: red; */
+    }
+    
+    .login .left {
+        width: 100%;
+    }
+
+    .login .left_content {
+        padding: 5vh 10vh;
+        /* background: #6e6262; */
+        /* overflow: hidden; */
+    }
+    
+    .login .left_content p {
+        text-align: center;
+        min-width: 30vh;
+    }
+
+    .left_content .google_login, .orSignIn, .email, .pass, .remember, .loginBtn {
+        min-width: 30vh;
+    }
+
+    .left_content #registered {
+        min-width: 20vh;
     }
 
     .login .right {
