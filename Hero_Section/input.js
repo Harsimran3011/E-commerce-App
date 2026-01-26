@@ -2,84 +2,84 @@ let products = [
     {
         name: "Wireless Earbuds, IPX8",
         price: "$89.99",
-        image: "red.webp",
+        image: "img/red.webp",
         rating: 6,
         reviews: 121
     },
     {
         name: "JBL Headphones, X81P",
         price: "$50.99",
-        image: "jbl.jpg",
+        image: "img/jbl.jpg",
         rating: 6,
         reviews: 121
     },
     {
         name: "Green Exclusive, P56Q",
         price: "$169.99",
-        image: "green.webp",
+        image: "img/green.webp",
         rating: 6,
         reviews: 121
     },
     {
         name: "Earphones, LK56",
         price: "$40.99",
-        image: "small.webp",
+        image: "img/small.webp",
         rating: 6,
         reviews: 121
     },
     {
         name: "Zebronics Headphones",
         price: "$35.99",
-        image: "game.webp",
+        image: "img/game.webp",
         rating: 6,
         reviews: 121
     },
     {
         name: "Wired Earphone, HOQ56",
         price: "$22.99",
-        image: "wired.webp",
+        image: "img/wired.webp",
         rating: 6,
         reviews: 121
     },
     {
         name: "Gaming Headphone, 56PQ",
         price: "$19.99",
-        image: "ing.webp",
+        image: "img/ing.webp",
         rating: 6,
         reviews: 121
     },
     {
         name: "Patron Headphone",
         price: "$11.99",
-        image: "la.jpg",
+        image: "img/la.jpg",
         rating: 6,
         reviews: 121
     },
     {
         name: "Red JBL Headphone",
         price: "$89.99",
-        image: "red.webp",
+        image: "img/red.webp",
         rating: 6,
         reviews: 121
     },
     {
         name: "White-Purple Headphone",
         price: "$50.99",
-        image: "jbl.jpg",
+        image: "img/jbl.jpg",
         rating: 6,
         reviews: 121
     },
     {
         name: "Dark JBL Headphone",
         price: "$169.99",
-        image: "green.webp",
+        image: "img/green.webp",
         rating: 6,
         reviews: 121
     },
     {
         name: "Sky Blue Earbuds IPX8",
         price: "$40.99",
-        image: "small.webp",
+        image: "img/small.webp",
         rating: 6,
         reviews: 121
     }
