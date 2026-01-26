@@ -59,7 +59,7 @@ html, body {
 
 
 .login .left .google_login {
-    border: 1px solid rgba(202, 200, 200, 0.555);
+    border: .1vh solid rgba(202, 200, 200, 0.555);
     padding: 1vh;
     border-radius: 3vh;
     margin-top: 3vh;
@@ -127,6 +127,7 @@ html, body {
     border-radius: 2vh;
     overflow: hidden;
     margin-top: .8vh;
+    display: flex;
 }
 
 .left_content .email .input input {
@@ -155,6 +156,7 @@ html, body {
     border-radius: 2vh;
     overflow: hidden;
     margin-top: .8vh;
+    display: flex;
 } 
 
 .left_content .pass .input input {
@@ -179,6 +181,12 @@ html, body {
 .remember #remember-check {
     display: flex;
     gap: .7vh;
+}
+
+#remember-check input[type="checkbox"] {
+    height: 15px;
+    width: 15px;
+    transform: none;
 }
 
 #remember-check input[type="checkbox"] {
@@ -240,7 +248,7 @@ html, body {
         text-align: center;
         min-width: 30vh;
     }
-
+    
     .left_content .google_login, .orSignIn, .email, .pass, .remember, .loginBtn {
         min-width: 30vh;
     }
@@ -261,8 +269,6 @@ html, body {
 
     .userInfo .login {
         max-width: 50vh;
-        /* background-color: transparent; */
-        /* background-color: red; */
     }
     
     .login .left {
@@ -271,8 +277,6 @@ html, body {
 
     .login .left_content {
         padding: 5vh 10vh;
-        /* background: #6e6262; */
-        /* overflow: hidden; */
     }
     
     .login .left_content p {
@@ -280,9 +284,11 @@ html, body {
         min-width: 30vh;
     }
 
+
     .left_content .google_login, .orSignIn, .email, .pass, .remember, .loginBtn {
         min-width: 30vh;
     }
+
 
     .left_content #registered {
         min-width: 20vh;
