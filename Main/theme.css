@@ -1,0 +1,49 @@
+:root {
+  /* ===== HEX ===== */
+  --ink-black-hex: #0d1b2a;
+  --prussian-blue-hex: #1b263b;
+  --dusk-blue-hex: #415a77;
+  --dusty-denim-hex: #778da9;
+  --alabaster-grey-hex: #e0e1dd;
+
+  /* ===== HSL ===== */
+  --ink-black-hsl: hsla(211, 53%, 11%, 1);
+  --prussian-blue-hsl: hsla(219, 37%, 17%, 1);
+  --dusk-blue-hsl: hsla(212, 29%, 36%, 1);
+  --dusty-denim-hsl: hsla(214, 23%, 56%, 1);
+  --alabaster-grey-hsl: hsla(75, 6%, 87%, 1);
+
+  /* ===== RGB ===== */
+  --ink-black-rgb: rgba(13, 27, 42, 1);
+  --prussian-blue-rgb: rgba(27, 38, 59, 1);
+  --dusk-blue-rgb: rgba(65, 90, 119, 1);
+  --dusty-denim-rgb: rgba(119, 141, 169, 1);
+  --alabaster-grey-rgb: rgba(224, 225, 221, 1);
+
+  /* ===== GRADIENTS (using HEX) ===== */
+  --gradient-top: linear-gradient(
+    0deg,
+    var(--ink-black-hex),
+    var(--prussian-blue-hex),
+    var(--dusk-blue-hex),
+    var(--dusty-denim-hex),
+    var(--alabaster-grey-hex)
+  );
+
+  --gradient-right: linear-gradient(
+    90deg,
+    var(--ink-black-hex),
+    var(--prussian-blue-hex),
+    var(--dusk-blue-hex),
+    var(--dusty-denim-hex),
+    var(--alabaster-grey-hex)
+  );
+
+  --gradient-radial: radial-gradient(
+    var(--ink-black-hex),
+    var(--prussian-blue-hex),
+    var(--dusk-blue-hex),
+    var(--dusty-denim-hex),
+    var(--alabaster-grey-hex)
+  );
+}
