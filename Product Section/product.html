@@ -1,15 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="/Main/theme.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css" rel="stylesheet" />
     <title>Products</title>
 </head>
-<body>
-    
-    
 
+<body>
+
+    <div class="product-main">
+
+        <div class="nav-bar">
+            <div class="logo">logo</div>
+            <div class="anchors">
+                <ul>
+                    <li>Home</li>
+                    <li>Shop</li>
+                    <li>Sale %</li>
+                    <li>Contact</li>
+                </ul>
+                <div class="input">
+                    <input type="text" placeholder="Search Product">
+                    <div id="search">
+                        <i class="ri-search-line"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="icons">
+                <div id="account">
+                    <i class="ri-user-line"></i> <a href="/Login-signUp/login_signUp.html">Account</a>
+                </div>
+
+                <div id="cart">
+                    <i class="ri-shopping-cart-2-line"></i> Cart
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-section">
+            <div class="part1">
+                <div class="big-img">
+                    <img src="/Product Section/img/white_headphone.png" alt="white-headphone" id="white-headphone">
+                </div>
+
+                <div class="small-images">
+
+                    <div class="image">
+                        <img src="/Product Section/img/black.png" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="/Product Section/img/blue.png" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="/Product Section/img/pink.png" alt="">
+                    </div>
+                    <div class="image">
+                        <img src="/Product Section/img/green.png" alt="">
+                    </div>
+
+                    <!-- <img src="/Product Section/img/blue.png" alt="">
+                    <img src="/Product Section/img/green.png" alt="">
+                    <img src="/Product Section/img/pink.png" alt=""> -->
+                </div>
+            </div>
+            <div class="part2">
+                <div class="first-content">
+                    <h2>Headphone Max</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas iure voluptas quibusdam velit alias dolores nemo, nulla reprehenderit magnam aut.</p>
+                    <p>★★★★★ (121)</p>
+                </div>
+
+                <div class="second-content">
+                    <h2>$549.00 or 99.99/month</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, quo.</p>
+                </div>
+
+                <div class="buy-product">
+                    <div class="input-section">
+                        <div class="inputs">
+                            <i class="ri-subtract-line"></i>
+                            <input type="text" placeholder="1">
+                            <i class="ri-add-line"></i>
+                        </div>
+
+                        <div class="input-content">
+                            <p>Only 12 items left! <br> Don't miss #</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="btn-section">
+                    <div class="inputBtn">buy now</div>
+                    <div class="addToCartBtn">add to cart</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 
     <script src="product.js"></script>
 </body>
+
 </html>

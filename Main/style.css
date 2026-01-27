@@ -103,7 +103,6 @@ body {
     color: var(--alabaster-grey-hex);
 }
 
-
 .page1 .hero-section {
     height: calc(100vh - 7vh);
     position: absolute;
@@ -128,12 +127,9 @@ body {
     font-size: 1.6vh;
     font-weight: 500;
     height: max-content;
-    /* padding: 2vh; */
-    
 }
 
 .hero-section .products {
-    /* height: 100%; */
     width: 100%;
     display: flex;
     align-items: center;
