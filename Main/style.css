@@ -9,6 +9,7 @@ html,
 body {
     height: 100%;
     width: 100%;
+    background: #000;
 }
 
 .main {
@@ -25,6 +26,7 @@ body {
     justify-content: space-between;
     background-color: var(--prussian-blue-hex);
     color: var(--alabaster-grey-hex);
+    z-index: 2;
 }
 
 .nav-bar .logo {
@@ -113,6 +115,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: var(--alabaster-grey-hex);
+    z-index: 1;
 }
 
 .hero-section .heading {
@@ -193,3 +196,138 @@ p {
 .add-btn:hover {
     background-color: #F0F0F0;
 }
+
+.page1 .sideTab {
+    height: 100%;
+    width: 22%;
+    position: fixed;
+    top: 0;
+    right: -22%;
+    z-index: 3;
+}
+
+.sideItems .top {
+    height: 10vh;
+    padding: 2vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(156, 155, 155, 0.267);
+    margin-bottom: 1vh;
+}
+
+.sideItems {
+    position: relative;
+    height: 100%;
+    background-color: #fff;
+}
+
+.sideItems .top h1 {
+    font-size: 2.5vh;
+}
+
+.sideItems .top .close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8vh;
+    gap: 1vh;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
+
+.sideItems .sideProducts {
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+    height: 4vw;
+    padding: 2vh;
+    position: relative;
+}
+
+.sideProducts img {
+    height: 8vh;
+}
+
+.sideProducts .img-details {
+    width: 10vw;
+    overflow-y: hidden;
+    overflow-wrap: break-word;
+}
+
+.sideProducts i {
+    margin-left: 4vw;
+    cursor: pointer;
+    font-size: 2.5vh;
+    font-weight: 100;
+}
+
+.sideItems .bottom {
+    height: 22vh;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 2vh;
+}
+
+.sideItems .sub-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    padding-bottom: .7vh;
+}
+
+.sideItems .sub-total h2 {
+    font-size: 2vh;
+}
+
+.sideItems .sub-total p {
+    font-size: 1.5vh;
+}
+
+.sideItems .total {
+    margin-top: 1.5vh;
+    margin-bottom: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sideItems .total h2 {
+    font-size: 2vh;
+}
+
+.sideItems .total p {
+    font-size: 1.5vh;
+}
+
+.sideItems .btns .btn {
+    height: 4vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    margin-bottom: 1vh;
+    border: none;
+    cursor: pointer;
+    background-color: #e0dede;
+}
+
+.sideItems .btns .btn h2 {
+    font-weight: 400;
+    font-size: 1.7vh;
+}
+
+.sideItems .btns #checkout i {
+    font-size: 1.8vh;
+    transform: scaleX(-1);
+}
+
+.sideItems .btns #view-cart i {
+    font-size: 1.8vh;
+}
+
+

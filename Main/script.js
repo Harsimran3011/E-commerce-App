@@ -114,29 +114,52 @@ function productsSection() {
             btn.classList.add("add-btn");
             btn.textContent = "Add to Cart";
 
+            getBtn(btn);
+
             main.appendChild(img);
             main.appendChild(h3);
             main.appendChild(span);
             main.appendChild(btn);
             grid.appendChild(main);
+            console.log(btn)
         });
 
     };
 
-
+    
+    
     inp.addEventListener("input", function () {
         let newOn = products.filter(function (u) {
             return u.name.toLowerCase().startsWith(inp.value.toLowerCase());
-
+            
         });
-
-
+        
+        
         showProducts(newOn);
     });
-
-
+    
+    
     showProducts(products);
-
+    
 }
+
+let sideTab = document.querySelector('.page1 .sideTab')
+let sideIcon = document.querySelector('.nav-bar #cart')
+let sideClose = document.querySelector('.sideItems .top .close')
+let cartBtn = document.querySelector('.page1 .products .add-btn')
+
+sideIcon.addEventListener("click",  () => {
+    sideTab.style.right = "0"
+})
+
+sideClose.addEventListener("click",  () => {
+    sideTab.style.right = "-22%"
+})
+
+let btn = function getBtn(btn) {
+    return btn;
+}
+console.log (btn)
+
 
 productsSection();
