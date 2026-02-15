@@ -238,11 +238,9 @@ p {
 }
 
 .sideItems .sideProducts {
-    /* display: flex;
-    align-items: center; */
-    /* gap: 2vh; */
-    height: auto;
+    height: 100%;
     position: relative;
+    overflow-y: scroll;
 }
 
 .sideProducts .products {
@@ -254,23 +252,23 @@ p {
     border: 1px solid rgba(151, 147, 147, 0.582);
 }
 
-.sideProducts .cartImg {
+.sideProducts .products .cartImg {
     height: 8vh;
 }
 
-.sideProducts .img-details {
+.sideProducts .products .img-details {
     font-size: 1.4vh;
-    width: 10vw;
+    width: 10vw; 
     overflow-y: hidden;
     overflow-wrap: break-word;
 }
 
-.sideProducts i {
-    margin-left: 3vw;
+.sideProducts .products i {
+    margin-left: 15%;
     cursor: pointer;
     font-size: 2.5vh;
     font-weight: 100;
-    display: none;
+    /* display: none; */
 }
 
 .sideItems .bottom {

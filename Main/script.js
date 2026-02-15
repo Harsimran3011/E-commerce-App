@@ -144,9 +144,9 @@ productsSection(products)
 
 
 
-let sideTab = document.querySelector('.page1 .sideTab')
-let sideIcon = document.querySelector('.nav-bar #cart')
-let sideClose = document.querySelector('.sideItems .top .close')
+const sideTab = document.querySelector('.page1 .sideTab')
+const sideIcon = document.querySelector('.nav-bar #cart')
+const sideClose = document.querySelector('.sideItems .top .close')
 
 sideIcon.addEventListener("click", () => { sideTab.style.right = "0" })
 sideClose.addEventListener("click", () => { sideTab.style.right = "-22%" })
@@ -175,16 +175,15 @@ cartBtns.forEach(function (e) {
         imgDetails.classList.add('img-details')
         imgDetails.innerHTML = product.name
 
-        cartCrossIcon = document.querySelector('.sideProducts i')
+        cartCrossIcon = document.createElement('i')
+        cartCrossIcon.classList.add('ri-close-line')
 
-        productDiv.prepend(imgDetails)
-        productDiv.prepend(cartImg)
-
-        let productIcon = document.querySelector('.sideProducts .products i').style.display = "initial"
+        productDiv.append(cartImg)
+        productDiv.append(imgDetails)
+        productDiv.append(cartCrossIcon)
 
         cartProduct.appendChild(productDiv)
-
-        console.log(idx)
-
     }
 })
+
+
