@@ -84,10 +84,13 @@ let products = [
         reviews: 121
     }
 ];
+
 products = products.map((p, i) => ({ ...p, id: i }))
 
 let cartBtns = []
+let productPrice = []
 
+// Grid Functionality
 function productsSection() {
 
     let inp = document.querySelector(".input input");
@@ -125,6 +128,8 @@ function productsSection() {
             main.appendChild(btn);
             grid.appendChild(main);
 
+            productPrice.push(span);
+
             cartBtns.push(btn)
         });
     };
@@ -139,11 +144,12 @@ function productsSection() {
 
     showProducts(products);
 }
-
 productsSection(products)
 
 
 
+// Side Tab Functionality
+let cart = []
 const sideTab = document.querySelector('.page1 .sideTab')
 const sideIcon = document.querySelector('.nav-bar #cart')
 const sideClose = document.querySelector('.sideItems .top .close')
@@ -151,39 +157,64 @@ const sideClose = document.querySelector('.sideItems .top .close')
 sideIcon.addEventListener("click", () => { sideTab.style.right = "0" })
 sideClose.addEventListener("click", () => { sideTab.style.right = "-22%" })
 
+products.forEach(function (e) {
 
-cartBtns.forEach(function (e) {
-    e.onclick = function () {
-        let idx = this.dataset.idx
-        let product = products[idx]
+    cartBtns.forEach(function (val) {
+        val.onclick = function () {
+            let idx = this.dataset.idx
+            let product = products[idx]
 
-        if (idx === undefined) {
-            console.error("data-idx missing on button");
-            return;
+            if (idx === undefined) {
+                console.error("data-idx missing on button");
+                return;
+            }
+
+            cartProduct = document.querySelector('.sideTab .sideItems .sideProducts')
+
+            productDiv = document.createElement('div')
+            productDiv.classList.add('products')
+
+            cartImg = document.createElement('img')
+            cartImg.src = product.image
+            cartImg.classList.add('cartImg')
+
+            imgDetails = document.createElement('div')
+            imgDetails.classList.add('img-details')
+            imgDetails.innerHTML = product.name
+
+            cartCrossIcon = document.createElement('i')
+            cartCrossIcon.classList.add('ri-close-line')
+
+            productDiv.append(cartImg)
+            productDiv.append(imgDetails)
+            productDiv.append(cartCrossIcon)
+
+            cartProduct.appendChild(productDiv)
+
+            cart.push(product)
+
+            accessSideProduct(productDiv)
+
         }
+    })
 
-        cartProduct = document.querySelector('.sideTab .sideItems .sideProducts')
 
-        productDiv = document.createElement('div')
-        productDiv.classList.add('products')
 
-        cartImg = document.createElement('img')
-        cartImg.src = product.image
-        cartImg.classList.add('cartImg')
-
-        imgDetails = document.createElement('div')
-        imgDetails.classList.add('img-details')
-        imgDetails.innerHTML = product.name
-
-        cartCrossIcon = document.createElement('i')
-        cartCrossIcon.classList.add('ri-close-line')
-
-        productDiv.append(cartImg)
-        productDiv.append(imgDetails)
-        productDiv.append(cartCrossIcon)
-
-        cartProduct.appendChild(productDiv)
-    }
 })
 
 
+function getPrice() {
+
+
+
+}
+
+
+function accessSideProduct(val) {
+    let icon = val.lastChild;
+
+    icon.addEventListener('click', () => {
+        val.remove();
+    })
+
+}
