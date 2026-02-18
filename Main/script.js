@@ -150,6 +150,9 @@ productsSection(products)
 
 // Side Tab Functionality
 let cart = []
+let prices = []
+
+
 const sideTab = document.querySelector('.page1 .sideTab')
 const sideIcon = document.querySelector('.nav-bar #cart')
 const sideClose = document.querySelector('.sideItems .top .close')
@@ -157,7 +160,7 @@ const sideClose = document.querySelector('.sideItems .top .close')
 sideIcon.addEventListener("click", () => { sideTab.style.right = "0" })
 sideClose.addEventListener("click", () => { sideTab.style.right = "-22%" })
 
-products.forEach(function (e) {
+products.forEach(function () {
 
     cartBtns.forEach(function (val) {
         val.onclick = function () {
@@ -173,6 +176,7 @@ products.forEach(function (e) {
 
             productDiv = document.createElement('div')
             productDiv.classList.add('products')
+            productDiv.dataset.id = product.id;
 
             cartImg = document.createElement('img')
             cartImg.src = product.image
@@ -194,27 +198,43 @@ products.forEach(function (e) {
             cart.push(product)
 
             accessSideProduct(productDiv)
-
+            updatePrice()
         }
     })
-
-
 
 })
 
 
-function getPrice() {
 
+function updatePrice() {
+    let subTotal = document.querySelector('.bottom .sub-total p')
+    let total = 0
 
-
+    cart.forEach(val => {
+        total += parseFloat(val.price.replace("$", "")) || 0;
+    })
+    subTotal.textContent = "$" + total.toFixed(2)
+    console.log(total)
 }
-
 
 function accessSideProduct(val) {
-    let icon = val.lastChild;
 
-    icon.addEventListener('click', () => {
+    let icon = val.querySelector('i');
+
+    icon.addEventListener("click", () => {
+
+        let id = Number(val.dataset.id);
+
+        let cartIndex = cart.findIndex(item => item.id === id);
+
+        if (cartIndex > -1) {
+            cart.splice(cartIndex, 1);
+        }
+
         val.remove();
-    })
-
+        updatePrice();
+    });
 }
+
+
+
